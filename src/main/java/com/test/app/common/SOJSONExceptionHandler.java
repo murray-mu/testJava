@@ -30,10 +30,10 @@ public class SOJSONExceptionHandler implements HandlerExceptionResolver {
 
 
             String message = e.getMessage();
-            String remsg = "抱歉，您的请求出现异常，我们已经监控到异常信息。您可以尝试再次请求。多次出现异常或需要更快的解决，加QQ群：608222884，验证消息 sojson api，反馈问题。";
+            String remsg = "抱歉，您的请求出现异常";
             int status = 400;
             if("no_city_id".equalsIgnoreCase(message)){
-                remsg = "CityId不在返回之内,加QQ群：608222884，验证消息 sojson api，反馈问题。";
+                remsg = "CityId 不存在";
                 status = 403;
             }
             if(null != message){
